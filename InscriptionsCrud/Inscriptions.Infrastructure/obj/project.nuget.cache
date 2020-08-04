@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "EiUuk/WJQVWhOrcINKU4/6Yc1cF836pEJDb37tWkD7lMx1SsUM36/PdUUpTwljLkNbB6agdTFFM8mGgOsVSaEA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sergi\\OneDrive\\Escritorio\\Alexander\\test_crud_aa\\InscriptionsCrud\\Inscriptions.Infrastructure\\Inscriptions.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sergi\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
