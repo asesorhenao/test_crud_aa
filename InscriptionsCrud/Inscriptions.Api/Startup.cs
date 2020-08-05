@@ -1,15 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Inscriptions.Core.Interfaces;
+using Inscriptions.Infrastructure.Data;
+using Inscriptions.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace Inscriptions.Api
 {
@@ -26,6 +23,12 @@ namespace Inscriptions.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddDbContext<inscriptionsCrudContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("inscriptionsCrud"))
+            );
+
+            services.AddTransient<IInscriptionRepository, InscriptionsRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
