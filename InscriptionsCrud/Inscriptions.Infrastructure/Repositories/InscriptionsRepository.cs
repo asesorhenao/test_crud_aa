@@ -14,10 +14,22 @@ namespace Inscriptions.Infrastructure.Repositories
         {
             _context = context;
         }
-        public async Task<IEnumerable<TblInscriptions>> GetInscriptions()
+        public async Task<IEnumerable<Core.Entities.Inscription>> GetInscriptions()
         {
-            var inscriptions = await _context.TblInscriptions.ToListAsync();
+            var inscriptions = await _context.Inscriptions.ToListAsync();
             return inscriptions;
+        }
+
+        public async Task<Core.Entities.Inscription> GetInscription(int id)
+        {
+            var inscription = await _context.Inscriptions.FirstOrDefaultAsync(x=> x.RegistrationId == id);
+            return inscription;
+        }
+
+        public async Task InsertPost(Core.Entities.Inscription post)
+        {
+            _context.Inscriptions.Add(post);
+            await _context.SaveChangesAsync();
         }
     }
 }

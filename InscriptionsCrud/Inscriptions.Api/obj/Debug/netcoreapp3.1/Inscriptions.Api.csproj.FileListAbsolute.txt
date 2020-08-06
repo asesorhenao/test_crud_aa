@@ -52,5 +52,7 @@ C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscr
 C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Api\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Api\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Api\obj\Debug\netcoreapp3.1\Inscriptions.Api.csproj.CoreCompileInputs.cache
 C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Api\obj\Debug\netcoreapp3.1\Inscriptions.Api.MvcApplicationPartsAssemblyInfo.cache

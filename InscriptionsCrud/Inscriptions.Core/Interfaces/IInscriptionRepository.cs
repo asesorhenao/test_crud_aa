@@ -6,6 +6,8 @@ namespace Inscriptions.Core.Interfaces
 {
     public interface IInscriptionRepository
     {
-        Task<IEnumerable<TblInscriptions>> GetInscriptions();
+        Task<IEnumerable<Entities.Inscription>> GetInscriptions();
+        Task<Entities.Inscription> GetInscription(int id);
+        Task InsertPost(Entities.Inscription post);
     }
 }

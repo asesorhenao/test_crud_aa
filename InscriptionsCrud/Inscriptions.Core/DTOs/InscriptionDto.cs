@@ -1,6 +1,10 @@
-﻿namespace Inscriptions.Core.Entities
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Inscriptions.Core.DTOs
 {
-    public partial class Inscription
+    public class InscriptionDto
     {
         public long RegistrationId { get; set; }
         public string ApplicantType { get; set; }

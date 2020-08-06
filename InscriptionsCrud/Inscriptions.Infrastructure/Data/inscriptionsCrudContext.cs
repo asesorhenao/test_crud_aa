@@ -14,114 +14,140 @@ namespace Inscriptions.Infrastructure.Data
         {
         }
 
-        public virtual DbSet<TblInscriptions> TblInscriptions { get; set; }
+        public virtual DbSet<Inscription> Inscriptions { get; set; }
         public object Publication { get; internal set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<TblInscriptions>(entity =>
+            modelBuilder.Entity<Inscription>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => e.RegistrationId);
 
                 entity.ToTable("tbl_Inscriptions");
 
                 entity.HasComment("");
 
-                entity.Property(e => e.Apellidos)
+                entity.Property(e => e.LastName)
+                    .HasColumnName("Apellidos")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.CiudadExpedicion)
+                entity.Property(e => e.ExpeditionCity)
+                    .HasColumnName("CiudadExpedicion")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.CiudadNacimiento)
+                entity.Property(e => e.BirthCity)
+                    .HasColumnName("CiudadNacimiento")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.DepartamentoExpedicion)
+                entity.Property(e => e.ExpeditionDepartment)
+                    .HasColumnName("DepartamentoExpedicion")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.DepartamentoNacimiento)
+                entity.Property(e => e.BirthDepartment)
+                    .HasColumnName("DepartamentoNacimiento")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Direccion)
+                entity.Property(e => e.Direcction)
+                    .HasColumnName("Direccion")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Email)
+                    .HasColumnName("Email")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.EstadoCivil)
+                entity.Property(e => e.CivilStatus)
+                    .HasColumnName("EstadoCivil")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.FechaExpedicion)
+                entity.Property(e => e.ExpeditionDate)
+                    .HasColumnName("FechaExpedicion")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.FechaNacimiento)
+                entity.Property(e => e.BirthDate)
+                    .HasColumnName("FechaNacimiento")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.GrupoSanguineo)
+                entity.Property(e => e.BloodType)
+                    .HasColumnName("GrupoSanguineo")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.IdInscripcion).ValueGeneratedOnAdd();
+                entity.Property(e => e.RegistrationId)
+                    .HasColumnName("IdInscripcion")
+                    .ValueGeneratedOnAdd();
 
-                entity.Property(e => e.Modalidad)
+                entity.Property(e => e.Modality)
+                    .HasColumnName("Modalidad")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Nombres)
+                entity.Property(e => e.FirstName)
+                    .HasColumnName("Nombres")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.NumeroCelular)
+                entity.Property(e => e.CellphoneNumber)
+                    .HasColumnName("NumeroCelular")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.NumeroDocumento)
+                entity.Property(e => e.DocumentNumber)
+                    .HasColumnName("NumeroDocumento")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.NumeroTelefono)
+                entity.Property(e => e.TelephoneNumber)
+                    .HasColumnName("NumeroTelefono")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.PaisExpedicion)
+                entity.Property(e => e.ExpeditionCountry)
+                    .HasColumnName("PaisExpedicion")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.PaisNacimiento)
+                entity.Property(e => e.BirthCountry)
+                    .HasColumnName("PaisNacimiento")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.PeriodoAcademico)
+                entity.Property(e => e.AcademicPeriod)
+                    .HasColumnName("PeriodoAcademico")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Programa)
+                entity.Property(e => e.Program)
+                    .HasColumnName("Programa")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Sede)
+                entity.Property(e => e.Campus)
+                    .HasColumnName("Sede")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Sexo)
+                entity.Property(e => e.Sex)
+                    .HasColumnName("Sexo")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.TipoAspirante)
+                entity.Property(e => e.ApplicantType)
+                    .HasColumnName("TipoAspirante")
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.TipoDocumento)
+                entity.Property(e => e.DocumentType)
+                    .HasColumnName("TipoDocumento")
                     .HasMaxLength(50)
                     .IsUnicode(false);
             });
