@@ -1,0 +1,9 @@
+C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Core\bin\Release\netstandard2.0\Inscriptions.Core.deps.json
+C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Core\bin\Release\netstandard2.0\Inscriptions.Core.dll
+C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Core\bin\Release\netstandard2.0\Inscriptions.Core.pdb
+C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Core\obj\Release\netstandard2.0\Inscriptions.Core.csprojAssemblyReference.cache
+C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Core\obj\Release\netstandard2.0\Inscriptions.Core.AssemblyInfoInputs.cache
+C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Core\obj\Release\netstandard2.0\Inscriptions.Core.AssemblyInfo.cs
+C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Core\obj\Release\netstandard2.0\Inscriptions.Core.csproj.CoreCompileInputs.cache
+C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Core\obj\Release\netstandard2.0\Inscriptions.Core.dll
+C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Core\obj\Release\netstandard2.0\Inscriptions.Core.pdb
