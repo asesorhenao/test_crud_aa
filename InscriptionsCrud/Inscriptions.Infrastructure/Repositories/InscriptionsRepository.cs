@@ -26,10 +26,51 @@ namespace Inscriptions.Infrastructure.Repositories
             return inscription;
         }
 
-        public async Task InsertPost(Core.Entities.Inscription post)
+        public async Task InsertInscription(Core.Entities.Inscription inscription)
         {
-            _context.Inscriptions.Add(post);
+            _context.Inscriptions.Add(inscription);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<bool> UpdateInscription(Inscription inscription) 
+        {
+            var currentPost = await GetInscription((int)inscription.RegistrationId);
+            currentPost.LastName = inscription.LastName;
+            currentPost.ExpeditionCity = inscription.ExpeditionCity;
+            currentPost.BirthCity = inscription.BirthCity;
+            currentPost.ExpeditionDepartment = inscription.ExpeditionDepartment;
+            currentPost.BirthDepartment = inscription.BirthDepartment;
+            currentPost.Direcction = inscription.Direcction;
+            currentPost.Email = inscription.Email;
+            currentPost.CivilStatus = inscription.CivilStatus;
+            currentPost.ExpeditionDate = inscription.ExpeditionDate;
+            currentPost.BirthDate = inscription.BirthDate;
+            currentPost.BloodType = inscription.BloodType;
+            currentPost.Modality = inscription.Modality;
+            currentPost.FirstName = inscription.FirstName;
+            currentPost.CellphoneNumber = inscription.CellphoneNumber;
+            currentPost.DocumentNumber = inscription.DocumentNumber;
+            currentPost.TelephoneNumber = inscription.TelephoneNumber;
+            currentPost.ExpeditionCountry = inscription.ExpeditionCountry;
+            currentPost.BirthCountry = inscription.BirthCountry;
+            currentPost.AcademicPeriod = inscription.AcademicPeriod;
+            currentPost.Program = inscription.Program;
+            currentPost.Campus = inscription.Campus;
+            currentPost.Sex = inscription.Sex;
+            currentPost.ApplicantType = inscription.ApplicantType;
+            currentPost.DocumentType = inscription.DocumentType;
+
+            int rows = await _context.SaveChangesAsync();
+            return rows > 0;
+        }
+
+        public async Task<bool> DeleteInscription(int id)
+        {
+            var currentInscription = await GetInscription(id);
+            _context.Inscriptions.Remove(currentInscription);
+            int rows = await _context.SaveChangesAsync();
+            return rows > 0;
         }
     }
 }
+

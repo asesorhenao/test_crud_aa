@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Inscriptions.Core.DTOs
+﻿namespace Inscriptions.Core.DTOs
 {
     public class InscriptionDto
     {

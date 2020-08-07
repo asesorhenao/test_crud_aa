@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "cyFtuorAXe0lZtwcdJn9EJ7/lXhQ2gR0gGH2svzU+5zdO01louSokqitSCYMnGGBeQ/q2RjFWdemk9TwEmaA8Q==",
+  "dgSpecHash": "O/j9rilRF7Sc7r3phEFEabw9s21pNQIAUZyiZwrrnO/b65TWtiBptFUjfqZjQ5ekZnZlmk1QbITe9+VIn3vDRg==",
   "success": true,
   "projectFilePath": "C:\\Users\\sergi\\OneDrive\\Escritorio\\Alexander\\test_crud_aa\\InscriptionsCrud\\Inscriptions.Core\\Inscriptions.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sergi\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\sergi\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\sergi\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

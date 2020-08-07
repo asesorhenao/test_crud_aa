@@ -1,6 +1,8 @@
 using AutoMapper;
+using FluentValidation.AspNetCore;
 using Inscriptions.Core.Interfaces;
 using Inscriptions.Infrastructure.Data;
+using Inscriptions.Infrastructure.Filters;
 using Inscriptions.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,13 +28,24 @@ namespace Inscriptions.Api
         {
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-            services.AddControllers();
+            services.AddControllers()
+            //Se desabilita la función de validación del modelo
+            .ConfigureApiBehaviorOptions(options => {
+                ///options.SuppressModelStateInvalidFilter = true;
+            });
 
             services.AddDbContext<inscriptionsCrudContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("inscriptionsCrud"))
             );
 
             services.AddTransient<IInscriptionRepository, InscriptionsRepository>();
+
+            services.AddMvc(options =>
+            {
+                options.Filters.Add<ValidationFilter>();
+            }).AddFluentValidation(options => {
+                options.RegisterValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

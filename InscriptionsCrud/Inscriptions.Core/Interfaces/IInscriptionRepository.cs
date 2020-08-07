@@ -8,6 +8,9 @@ namespace Inscriptions.Core.Interfaces
     {
         Task<IEnumerable<Entities.Inscription>> GetInscriptions();
         Task<Entities.Inscription> GetInscription(int id);
-        Task InsertPost(Entities.Inscription post);
+        Task InsertInscription(Entities.Inscription inscription);
+        Task<bool> UpdateInscription(Inscription inscription);
+        Task<bool> DeleteInscription(int id);
+
     }
 }

@@ -56,3 +56,10 @@ C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscr
 C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Api\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Api\obj\Debug\netcoreapp3.1\Inscriptions.Api.csproj.CoreCompileInputs.cache
 C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Api\obj\Debug\netcoreapp3.1\Inscriptions.Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Api\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Api\obj\Debug\netcoreapp3.1\Inscriptions.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Api\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Api\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
+C:\Users\sergi\OneDrive\Escritorio\Alexander\test_crud_aa\InscriptionsCrud\Inscriptions.Api\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll

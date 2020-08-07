@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Inscriptions.Api.Responses;
 using Inscriptions.Core.DTOs;
 using Inscriptions.Core.Entities;
 using Inscriptions.Core.Interfaces;
@@ -25,7 +26,8 @@ namespace Inscriptions.Api.Controllers
         {
             var inscriptions = await _inscriptionRepository.GetInscriptions();
             var inscriptionsDto = _mapper.Map <IEnumerable<InscriptionDto>>(inscriptions);
-            return Ok(inscriptionsDto);
+            var response = new ApiResponse<IEnumerable<InscriptionDto>>(inscriptionsDto);
+            return Ok(response);
         }
 
         [HttpGet("{id}")]
@@ -33,15 +35,36 @@ namespace Inscriptions.Api.Controllers
         {
             var inscription = await _inscriptionRepository.GetInscription(id);
             var inscriptionDto = _mapper.Map<InscriptionDto>(inscription);
-            return Ok(inscriptionDto);
+            var response = new ApiResponse<InscriptionDto>(inscriptionDto);
+            return Ok(response);
         }
 
         [HttpPost]
         public async Task<IActionResult> Post(InscriptionDto inscriptionDto)
         {
             var inscription = _mapper.Map<Inscription>(inscriptionDto);
-            await _inscriptionRepository.InsertPost(inscription);
-            return Ok(inscription);
+            await _inscriptionRepository.InsertInscription(inscription);
+            inscriptionDto = _mapper.Map<InscriptionDto>(inscription);
+            var response = new ApiResponse<InscriptionDto>(inscriptionDto);
+            return Ok(response);
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> Put(int id, InscriptionDto inscriptionDto)
+        {
+            var inscription = _mapper.Map<Inscription>(inscriptionDto);
+            inscription.RegistrationId = id;
+            var result = await _inscriptionRepository.UpdateInscription(inscription);
+            var response = new ApiResponse<bool>(result);
+            return Ok(response);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var result = await _inscriptionRepository.DeleteInscription(id);
+            var response = new ApiResponse<bool>(result);
+            return Ok(response);
         }
     }
 }
