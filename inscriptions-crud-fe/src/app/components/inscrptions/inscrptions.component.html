@@ -1,0 +1,63 @@
+<h5 class="title">Obtener inscripción por ID</h5>
+<div class="form-content">
+  <input 
+    class="form-control" 
+    type="text" 
+    #textId
+    placeholder="Ingrese el Id"
+  >
+  <button 
+    class="btn btn-primary"
+    (click)="getInscription(textId.value)"
+  >
+    <i class="fas fa-search"></i>
+  </button>
+</div>
+
+<ng-container *ngIf="notFound">
+  Inscripción no encontrada
+</ng-container>
+
+<ng-container *ngIf="inscription">
+  <div class="card">
+    <div class="card-header">Inscripción</div>
+    <div class="card-body">
+      <ul class="list">
+        <li>ID: {{ inscription.data.registrationId }} </li>
+        <li>Tipo de Aspirante: {{ inscription.data.applicantType }}</li>
+        <li>Programa: {{ inscription.data.program }}</li>
+        <li>Modalidad: {{ inscription.data.modality }}</li>
+        <li>Periodo Acádemico: {{ inscription.data.academicPeriod }}</li>
+        <li>Sede: {{ inscription.data.campus }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">Datos Personales</div>
+    <div class="card-body">
+      <ul class="list">
+        <li> Nombres: {{ inscription.data.firstName }}</li>
+        <li> Apellidos: {{ inscription.data.lastName }}</li>
+        <li> Tipo de Documento: {{ inscription.data.documentType }}</li>
+        <li> Número de Documento: {{ inscription.data.documentNumber }}</li>
+        <li> Fecha de Expedición: {{ inscription.data.expeditionDate }}</li>
+        <li> País de Expedición: {{ inscription.data.expeditionCountry }}</li>
+        <li> Departamento de Expedición: {{ inscription.data.expeditionDepartment }}</li>
+        <li> Ciudad de Expedición: {{ inscription.data.expeditionCity }}</li>
+        <li> Fecha de Cumpleaños: {{ inscription.data.birthDate }}</li>
+        <li> País de Nacimiento: {{ inscription.data.birthCountry }}</li>
+        <li> Departamento de Nacimiento: {{ inscription.data.birthDepartment }}</li>
+        <li> Ciudad de Nacimiento: {{ inscription.data.birthCity }}</li>
+        <li> Email: {{ inscription.data.email }}</li>
+        <li> Número de Teléfono: {{ inscription.data.telephoneNumber }}</li>
+        <li> Número de Celular: {{ inscription.data.cellphoneNumber }}</li>
+        <li> Dirección Residencia: {{ inscription.data.direcction }}</li>
+        <li> Tipo de Sangre: {{ inscription.data.bloodType }}</li>
+        <li> Género: {{ inscription.data.sex }}</li>
+        <li> Estado Civil: {{ inscription.data.civilStatus }}</li>  
+      </ul>
+    </div>
+  </div>    
+</ng-container>
+
+

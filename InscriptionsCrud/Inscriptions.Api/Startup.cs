@@ -40,6 +40,8 @@ namespace Inscriptions.Api
 
             services.AddTransient<IInscriptionRepository, InscriptionsRepository>();
 
+            services.AddCors();
+
             services.AddMvc(options =>
             {
                 options.Filters.Add<ValidationFilter>();
@@ -55,6 +57,14 @@ namespace Inscriptions.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(x => 
+            {
+                x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+            });
 
             app.UseHttpsRedirection();
 
