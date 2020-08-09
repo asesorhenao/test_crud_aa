@@ -1,4 +1,4 @@
-# test_crud_aa
+# API
 Se crea una API con .NET Core 3.1
 Dirección de la API: https://apiinscripciones.azurewebsites.net/api/Inscriptions
 
