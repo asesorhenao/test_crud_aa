@@ -4,4 +4,4 @@ Dirección de la API: https://apiinscripciones.azurewebsites.net/api/Inscription
 
 La parte Front End se crea en Angular 10
 
-En el repositorio se separa en carpetas el Back End y el Front End
+El repositorio se separa en carpetas el Back End y el Front End
