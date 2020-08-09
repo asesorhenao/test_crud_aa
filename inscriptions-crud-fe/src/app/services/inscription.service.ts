@@ -20,6 +20,10 @@ export class InscriptionService {
   getInscriptions(): Observable<Inscription[]> {
     return this.http.get<Inscription[]>(this.baseURL);    
   }
+
+  CreateInscription(inscription: Inscription): Observable<Inscription> {
+    return this.http.post<Inscription>(this.baseURL, inscription);
+  }
   
   DeleteInscription(insciptionId: string): Observable<any>{
     const url = this.baseURL + '/' + insciptionId;

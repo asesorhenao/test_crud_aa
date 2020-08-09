@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Inscription } from 'src/app/models/inscription';
 import { InscriptionService } from 'src/app/services/inscription.service';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
@@ -10,7 +12,10 @@ import Swal from 'sweetalert2';
 export class DetailsComponent implements OnInit {
   inscriptions: Inscription[];
 
-  constructor(private inscriptionService: InscriptionService) { }
+  constructor(
+    private inscriptionService: InscriptionService,
+    private reute: Router
+  ) { }
 
   ngOnInit(): void {
     this.inscriptionService
@@ -34,8 +39,6 @@ export class DetailsComponent implements OnInit {
         this.inscriptionService
           .DeleteInscription(id)
           .subscribe((inscriptionFromAPI: Inscription[]) => {
-            this.inscriptions = inscriptionFromAPI;
-            //this.inscriptions.slice(index, 1);
           });
         Swal.fire(
           'Eliminado!',
@@ -43,6 +46,7 @@ export class DetailsComponent implements OnInit {
           'success'
         )
       }
+      this.reute.navigate(['']);
     });
   }
 }

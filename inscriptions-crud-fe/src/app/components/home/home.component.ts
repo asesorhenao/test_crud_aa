@@ -13,6 +13,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
   navigationInscriptions() {
-    this.router.navigate(['/inscriptions']);
+    this.router.navigate(['/inscription']);
   }
 }

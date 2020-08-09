@@ -1,0 +1,32 @@
+.btnContent {
+  margin: 10px 0;
+}
+.btnInscription {
+  margin-right: 5px;
+}
+.title {
+  margin-top: 30px;
+}
+
+.contentBody {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .contentBody {
+   display: flex;
+   flex-wrap: wrap;
+ }
+ .formGroup {
+   width: 45%;
+   margin: 10px 15px;
+ }
+}
+@media (min-width: 1024px) {
+  .contentBody {
+   display: flex;
+ }
+ .formGroup {
+   width: 30%;
+ }
+}

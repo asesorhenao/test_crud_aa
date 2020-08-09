@@ -4,6 +4,7 @@
       <thead class="thead-dark">
         <tr>
           <th></th>
+          <th>ID</th>
           <th>Programa</th>
           <th>Tipo</th>
           <th>Modalidad</th>
@@ -11,8 +12,7 @@
           <th>Periodo</th>
           <th>Nombres</th>
           <th>Apellidos</th>
-          <th>Tipo de Documento</th>
-          <th>Número de Documento</th>
+          <th>Documento</th>
           <th>Celular</th>
           <th>Email</th>
           <th>Sexo</th>
@@ -22,12 +22,13 @@
         <tr *ngFor="let inscription of inscriptions.data, let index = index">
           <td>
             <button 
-              class="btn"
+              class="btnDetail"
               (click)="handleDelete(inscription.registrationId, index)"
             >
               <i class="fas fa-trash-alt delete"></i>
             </button>
           </td>
+          <td>{{ inscription.registrationId }}</td>
           <td>{{ inscription.program }}</td>
           <td>{{ inscription.applicantType }}</td>
           <td>{{ inscription.modality }}</td>
@@ -35,7 +36,6 @@
           <td>{{ inscription.academicPeriod }}</td>
           <td>{{ inscription.firstName }}</td>
           <td>{{ inscription.lastName }}</td>
-          <td>{{ inscription.documentType }}</td>
           <td>{{ inscription.documentNumber }}</td>
           <td>{{ inscription.cellphoneNumber }}</td>
           <td>{{ inscription.email }}</td>

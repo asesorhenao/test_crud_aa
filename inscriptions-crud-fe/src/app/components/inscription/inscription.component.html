@@ -1,0 +1,371 @@
+<h5 class="title">Formulario de Inscripción</h5>
+<form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+  <div class="card">
+    <div class="card-header">Información de Inscripción</div>
+    <div class="card-body contentBody">
+      <div class="form-group formGroup">
+        <label for="applicantType">Tipo de Aspirante</label>
+        <select 
+          name="applicantType" 
+          id="applicantType" 
+          class="form-control"
+          formControlName="applicantType"
+        >
+        <option 
+          *ngFor="let applicantType of applicantType"
+          [values]="applicantType.value"
+        >
+          {{ applicantType.text }}
+        </option>
+        </select>
+      </div>
+      <div class="form-group formGroup">
+        <label for="modality">Modalidad</label>
+        <select 
+          name="modality" 
+          id="modality" 
+          class="form-control"
+          formControlName="modality"
+        >
+        <option 
+          *ngFor="let modality of modalitys"
+          [values]="modality.value"
+        >
+          {{ modality.text }}
+        </option>
+        </select>
+      </div>
+      <div class="form-group formGroup">
+        <label for="campus">Sede</label>
+        <select 
+          name="campus" 
+          id="campus" 
+          class="form-control"
+          formControlName="campus"
+        >
+        <option 
+          *ngFor="let campus of campus"
+          [values]="campus.value"
+        >
+          {{ campus.text }}
+        </option>
+        </select>
+      </div>
+      <div class="form-group formGroup">
+        <label for="program">Programa</label>
+        <select 
+          name="program" 
+          id="program" 
+          class="form-control"
+          formControlName="program"
+        >
+        <option 
+          *ngFor="let program of programs"
+          [values]="program.value"
+        >
+          {{ program.text }}
+        </option>
+        </select>
+      </div>
+      <div class="form-group formGroup">
+        <label for="academicPeriod">Período Académico</label>
+        <select 
+          name="academicPeriod" 
+          id="academicPeriod" 
+          class="form-control"
+          formControlName="academicPeriod"
+        >
+        <option 
+          *ngFor="let academicPeriod of academicPeriods"
+          [values]="academicPeriod.value"
+        >
+          {{ academicPeriod.text }}
+        </option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">Información Personal</div>
+    <div class="card-body contentBody">
+      <div class="form-group formGroup">
+        <label for="firstName">Nombres *</label>
+        <input 
+          type="text"
+          class="form-control"
+          formControlName="firstName"
+        >
+        <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="alert alert-danger">
+          <div *ngIf="firstName.errors.required">
+            El nombre del usuario es requerido  
+          </div>
+        </div>
+      </div>
+      <div class="form-group formGroup">
+        <label for="lastName">Apellidos *</label>
+        <input 
+          type="text"
+          class="form-control"
+          formControlName="lastName"
+        >
+        <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="alert alert-danger">
+          <div *ngIf="lastName.errors.required">
+            El apellido del usuario es requerido  
+          </div>
+        </div>
+      </div>
+      <div class="form-group formGroup">
+        <label for="birthDate">Fecha de Nacimiento *</label>
+        <input 
+          type="date"
+          class="form-control"
+          formControlName="birthDate"
+        >
+        <div *ngIf="birthDate.invalid && (birthDate.dirty || birthDate.touched)" class="alert alert-danger">
+          <div *ngIf="birthDate.errors.required">
+            La fecha de cumpleaños es requerida  
+          </div>
+        </div>
+      </div>
+      <div class="form-group formGroup">
+        <label for="birthCountry">País de Nacimiento</label>
+        <select 
+          name="birthCountry" 
+          id="birthCountry" 
+          class="form-control"
+          formControlName="birthCountry"
+        >
+        <option 
+          *ngFor="let country of countries"
+          [values]="country.value"
+        >
+          {{ country.text }}
+        </option>
+        </select>
+      </div>
+      <div class="form-group formGroup">
+        <label for="birthDepartment">Departamento de Nacimiento</label>
+        <select 
+          name="birthDepartment" 
+          id="birthDepartment" 
+          class="form-control"
+          formControlName="birthDepartment"
+        >
+        <option 
+          *ngFor="let department of departments"
+          [values]="department.value"
+        >
+          {{ department.text }}
+        </option>
+        </select>
+      </div>
+      <div class="form-group formGroup">
+        <label for="birthCity">Ciudad de Nacimiento</label>
+        <select 
+          name="birthCity" 
+          id="birthCity" 
+          class="form-control"
+          formControlName="birthCity"
+        >
+        <option 
+          *ngFor="let city of citys"
+          [values]="city.value"
+        >
+          {{ city.text }}
+        </option>
+        </select>
+      </div>
+      <div class="form-group formGroup">
+        <label for="bloodType">Tipo de Sangre</label>
+        <select 
+          name="bloodType" 
+          id="bloodType" 
+          class="form-control"
+          formControlName="bloodType"
+        >
+        <option 
+          *ngFor="let bloodType of bloodTypes"
+          [values]="bloodType.value"
+        >
+          {{ bloodType.text }}
+        </option>
+        </select>
+      </div>
+      <div class="form-group formGroup">
+        <label for="documentType">Tipo de Documento</label>
+        <select 
+          name="documentType" 
+          id="documentType" 
+          class="form-control"
+          formControlName="documentType"
+        >
+        <option 
+          *ngFor="let documentType of documentTypes"
+          [values]="documentType.value"
+        >
+          {{ documentType.text }}
+        </option>
+        </select>
+      </div>
+      <div class="form-group formGroup">
+        <label for="documentNumber">Número de Documento *</label>
+        <input 
+          type="text"
+          class="form-control"
+          formControlName="documentNumber"
+        >
+        <div *ngIf="documentNumber.invalid && (documentNumber.dirty || documentNumber.touched)" class="alert alert-danger">
+          <div *ngIf="documentNumber.errors.required">
+            El número de documento del usuario es requerido  
+          </div>
+        </div>
+      </div>
+      <div class="form-group formGroup">
+        <label for="expeditionDate">Fecha de Expedixión del Documento *</label>
+        <input 
+          type="date"
+          class="form-control"
+          formControlName="expeditionDate"
+        >
+        <div *ngIf="expeditionDate.invalid && (expeditionDate.dirty || expeditionDate.touched)" class="alert alert-danger">
+          <div *ngIf="expeditionDate.errors.required">
+            La fecha de expedición del documento es requerido  
+          </div>
+        </div>
+      </div>
+      <div class="form-group formGroup">
+        <label for="expeditionCountry">País de Expedición</label>
+        <select 
+          name="expeditionCountry" 
+          id="expeditionCountry" 
+          class="form-control"
+          formControlName="expeditionCountry"
+        >
+        <option 
+          *ngFor="let country of countries"
+          [values]="country.value"
+        >
+          {{ country.text }}
+        </option>
+        </select>
+      </div>
+      <div class="form-group formGroup">
+        <label for="expeditionDepartment">Departamento de Expedición</label>
+        <select 
+          name="expeditionDepartment" 
+          id="expeditionDepartment" 
+          class="form-control"
+          formControlName="expeditionDepartment"
+        >
+        <option 
+          *ngFor="let department of departments"
+          [values]="department.value"
+        >
+          {{ department.text }}
+        </option>
+        </select>
+      </div>
+      <div class="form-group formGroup">
+        <label for="expeditionCity">Ciudad de Expedición</label>
+        <select 
+          name="expeditionCity" 
+          id="expeditionCity" 
+          class="form-control"
+          formControlName="expeditionCity"
+        >
+        <option 
+          *ngFor="let city of citys"
+          [values]="city.value"
+        >
+          {{ city.text }}
+        </option>
+        </select>
+      </div>
+      <div class="form-group formGroup">
+        <label for="sex">Sexo</label>
+        <select 
+          name="sex" 
+          id="sex" 
+          class="form-control"
+          formControlName="sex"
+        >
+        <option 
+          *ngFor="let sex of sexs"
+          [values]="sex.value"
+        >
+          {{ sex.text }}
+        </option>
+        </select>
+      </div>
+      <div class="form-group formGroup">
+        <label for="civilStatus">Estado Civil</label>
+        <select 
+          name="civilStatus" 
+          id="civilStatus" 
+          class="form-control"
+          formControlName="civilStatus"
+        >
+        <option 
+          *ngFor="let civilStatus of civilStatuss"
+          [values]="civilStatus.value"
+        >
+          {{ civilStatus.text }}
+        </option>
+        </select>
+      </div>
+      <div class="form-group formGroup">
+        <label for="telephoneNumber">Númeno de Teléfono</label>
+        <input 
+          type="text"
+          class="form-control"
+          formControlName="telephoneNumber"
+        >
+      </div>
+      <div class="form-group formGroup">
+        <label for="cellphoneNumber">Número de Celular *</label>
+        <input 
+          type="text"
+          class="form-control"
+          formControlName="cellphoneNumber"
+        >
+        <div *ngIf="cellphoneNumber.invalid && (cellphoneNumber.dirty || cellphoneNumber.touched)" class="alert alert-danger">
+          <div *ngIf="cellphoneNumber.errors.required">
+            El número de celular es requerido  
+          </div>
+        </div>
+      </div>
+      <div class="form-group formGroup">
+        <label for="email">Correo Electrónico *</label>
+        <input 
+          type="email"
+          class="form-control"
+          formControlName="email"
+          required
+        >
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+          <div *ngIf="email.errors.required">
+            El correo electrónico es requerido  
+          </div>
+        </div>
+      </div>
+      <div class="form-group formGroup">
+        <label for="direcction">Dirección Residencia *</label>
+        <input 
+          type="text"
+          class="form-control"
+          formControlName="direcction"
+        >
+        <div *ngIf="direcction.invalid && (direcction.dirty || direcction.touched)" class="alert alert-danger">
+          <div *ngIf="direcction.errors.required">
+            La dirección es requerida  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="btnContent">
+    <button type="submit" class="btn btn-success btnInscription" [disabled]="registerForm.invalid">Enviar</button>
+    <button type="submit" class="btn btn-primary btnInscription" (click)="onRefresh()">Refrescar</button>
+  </div>
+</form>
+ 
